@@ -1,0 +1,196 @@
+/*
+    Whitewater Specific Variables
+*/
+// Brand Red
+$color-red: #ba0d30;
+$tabwidth: 700px;
+
+// overrides
+body.single-print_menus {
+   header#masthead,
+   .topbar,
+   footer.site-footer {
+        display: none;
+    } 
+    .text-centered-section {
+        padding: 0;
+    }
+    .no-banner-spacer {
+        margin: 0;
+    }
+}
+
+
+section.the-menu {
+    width: 100%;
+    text-align: left;
+    @media screen and (min-width: $tabwidth) {
+       // column-gap: 2%;
+        
+    }
+    .fnb-wrap {
+        @media screen and (min-width: $tabwidth) {
+            column-count: 2;
+        }
+        @media print {
+            column-count: 2;
+        }
+    }
+    .fnb-logo {
+        width: 40%;
+        margin: 0 auto 60px auto;
+        img {
+            max-width: 100%;
+        }
+        @media print {
+            margin: 0 auto;
+        }
+    }
+    .clear {clear: both;}
+    .fnb {
+        width: auto;
+        padding: 0 0 0 10%;
+        margin-bottom: 60px;
+        @media print {
+            // width: 40%;
+        }
+    }
+    .introtext {
+        width: 100%;
+        font-size: 14px;
+        margin: 0 0 20px 0;
+    }
+    h2 {
+        border-bottom: dotted 1px #333;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding-bottom: 5px;
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .bottom-section {
+        width: 100%;
+        float: left;
+        margin: 40px auto;
+        .fnb-ww-logo {
+            width: 80px;
+            margin: 30px auto;
+            text-indent:  -90000px;
+            background: {
+                image: url(assets/img/logo.png);
+                size: contain;
+                repeat: no-repeat;
+                position: center center;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        .term-desc {
+            width: 50%;
+            text-align: center;
+            font-size: 12px;
+            margin: 0 auto;
+        }
+        .notes {
+            width: 100%;
+            text-align: center;
+            .noter {
+                width: auto;
+                display: inline-block;
+                text-align: center;
+                margin: 0 10px;
+                line-height: 1;
+                font-size: 14px;
+                .flexer {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+                .vegetarian, .gluten {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    margin: 0 4px 0 0;
+                    background: {
+                        size: contain;
+                    }
+                }
+                .thenote {
+                    width: auto;
+                    display: inline-block;
+                }
+                .vegetarian {
+                    background-image: url('assets/img/vegetarian.png');
+                    
+                }
+                .gluten {
+                    background-image: url('assets/img/gluten.png');
+                }
+            }
+        }
+    }
+    
+
+    .fnb-item {
+        width: 100%;
+        .item-row {
+            width: 100%;
+            line-height: 1;
+            position: relative;
+            margin: 0 0 20px 0;
+        }
+        .ficon {
+            text-indent: -9000px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin: 0;
+            background: {
+                size: cover;
+            }
+        }
+        .vegetarian {
+            background-image: url('assets/img/vegetarian.png');
+        }
+        .gluten {
+            background-image: url('assets/img/gluten.png');
+        }
+        .both {
+            width: 40px;
+            position: absolute;
+            left: -45px;
+            font-size: 0;
+        }
+        .single {
+            width: 20px;
+            position: absolute;
+            left: -25px;
+        }
+        h3 {
+            font-size: 18px;
+            display: inline-block;
+            width: auto;
+            text-transform: capitalize;
+        }
+        .price {
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            width: auto;
+        }
+        .fdesc {
+            font-size: 12px;
+        }
+    }
+}
+@media print {
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+    body, html {
+margin-top:0px;
+padding-top:0px;
+}
+}

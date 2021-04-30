@@ -1,0 +1,37 @@
+body.single-print_menus header#masthead,body.single-print_menus .topbar,body.single-print_menus footer.site-footer{display:none}
+body.single-print_menus .text-centered-section{padding:0}
+body.single-print_menus .no-banner-spacer{margin:0}
+section.the-menu{width:100%;text-align:left}
+section.the-menu .fnb-logo{width:40%;margin:0 auto 60px auto}
+section.the-menu .fnb-logo img{max-width:100%}
+section.the-menu .clear{clear:both}
+section.the-menu .fnb{width:auto;padding:0 0 0 10%;margin-bottom:60px}
+section.the-menu .introtext{width:100%;font-size:14px;margin:0 0 20px 0}
+section.the-menu h2{border-bottom:dotted 1px #333;text-transform:uppercase;font-size:20px;padding-bottom:5px;width:60%;margin-bottom:20px}
+section.the-menu .bottom-section{width:100%;float:left;margin:40px auto}
+section.the-menu .bottom-section .fnb-ww-logo{width:80px;margin:30px auto;text-indent:-90000px;background-image:url(assets/img/logo.png);background-size:contain;background-repeat:no-repeat;background-position:center center}
+section.the-menu .bottom-section .fnb-ww-logo img{max-width:100%}
+section.the-menu .bottom-section .term-desc{width:50%;text-align:center;font-size:12px;margin:0 auto}
+section.the-menu .bottom-section .notes{width:100%;text-align:center}
+section.the-menu .bottom-section .notes .noter{width:auto;display:inline-block;text-align:center;margin:0 10px;line-height:1;font-size:14px}
+section.the-menu .bottom-section .notes .noter .flexer{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+section.the-menu .bottom-section .notes .noter .vegetarian,section.the-menu .bottom-section .notes .noter .gluten{width:20px;height:20px;display:inline-block;margin:0 4px 0 0;background-size:contain}
+section.the-menu .bottom-section .notes .noter .thenote{width:auto;display:inline-block}
+section.the-menu .bottom-section .notes .noter .vegetarian{background-image:url("assets/img/vegetarian.png")}
+section.the-menu .bottom-section .notes .noter .gluten{background-image:url("assets/img/gluten.png")}
+section.the-menu .fnb-item{width:100%}
+section.the-menu .fnb-item .item-row{width:100%;line-height:1;position:relative;margin:0 0 20px 0}
+section.the-menu .fnb-item .ficon{text-indent:-9000px;width:20px;height:20px;display:inline-block;margin:0;background-size:cover}
+section.the-menu .fnb-item .vegetarian{background-image:url("assets/img/vegetarian.png")}
+section.the-menu .fnb-item .gluten{background-image:url("assets/img/gluten.png")}
+section.the-menu .fnb-item .both{width:40px;position:absolute;left:-45px;font-size:0}
+section.the-menu .fnb-item .single{width:20px;position:absolute;left:-25px}
+section.the-menu .fnb-item h3{font-size:18px;display:inline-block;width:auto;text-transform:capitalize}
+section.the-menu .fnb-item .price{font-size:12px;font-weight:bold;display:inline-block;width:auto}
+section.the-menu .fnb-item .fdesc{font-size:12px}
+@media screen and (min-width:700px){section.the-menu .fnb-wrap{-webkit-column-count:2;-moz-column-count:2;column-count:2}
+}@media print{section.the-menu .fnb-wrap{-webkit-column-count:2;-moz-column-count:2;column-count:2}
+section.the-menu .fnb-logo{margin:0 auto}
+.pagebreak{clear:both;page-break-after:always}
+body,html{margin-top:0;padding-top:0}
+}
