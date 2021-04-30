@@ -19,7 +19,17 @@ body.single-print_menus {
         margin: 0;
     }
 }
-
+body.page-id-47945,
+body.page-id-47953,
+body.page-id-47943,
+body.page-id-47951,
+body.page-id-47949,
+body.page-id-47947
+{
+    .page-header {
+        display: none;
+    }
+}
 
 section.the-menu {
     width: 100%;
