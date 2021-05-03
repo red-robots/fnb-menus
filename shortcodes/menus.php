@@ -25,6 +25,7 @@ function riversedge_shortcode( $atts ) {
 	ob_start(); 
 	
 	$i = 0;
+	$pbTitle = '';
 	$location = $a['location'];
 	// get the terms
 	$ourTerm = get_term_by( 'slug', $location, 'fnb_location' );
@@ -61,18 +62,25 @@ function riversedge_shortcode( $atts ) {
 				<div class="fnb-wrap">
 			<?php while( $query->have_posts() ): $query->the_post(); $i++; 
 				$title = get_the_title();
+				// $pbTitle = get_field('page_break_title');
+				$pageBreak = get_field('page_break');
+				if( $pageBreak == 'yes' ) {
+					$pClass = 'hide';
+				} else {
+					$pClass = 'show';
+				}
 				//echo $title;
-				if( $title == 'Page Break' ) { ?>
-					<div class="pagebreak"> </div>
+				if( $pageBreak == 'yes' ) { ?>
+					<div class="pagebreak"><h2><?php the_title(); ?></h2></div>
 				<?php }
 
 				?>
-				<div class="fnb">
+				<div class="fnb <?php echo $pClass; ?>">
 					<?php 
 				// echo 'works';
 				$introText = get_field('intro_text');
 				?>
-				<h2><?php the_title(); ?></h2>
+				<h2 class="m-item"><?php the_title(); ?></h2>
 				<?php
 				if( $introText ) { ?>
 					<div class="introtext"><?php echo $introText; ?></div>

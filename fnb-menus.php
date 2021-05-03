@@ -48,10 +48,12 @@ function fnb_custom_menus()
     'not_found_in_trash' => __('No F&B Menu found in Trash'), 
     'parent_item_colon' => '',
     'menu_name' => 'F&B Menus'
+    
   );
   $args = array(
 	'labels' => $labels,
     'public' => true,
+    'menu_icon' => 'dashicons-carrot',
     'publicly_queryable' => true,
     'show_ui' => true, 
     'show_in_menu' => true, 

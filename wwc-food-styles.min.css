@@ -3,12 +3,15 @@ body.single-print_menus .text-centered-section{padding:0}
 body.single-print_menus .no-banner-spacer{margin:0}
 body.page-id-47945 .page-header,body.page-id-47953 .page-header,body.page-id-47943 .page-header,body.page-id-47951 .page-header,body.page-id-47949 .page-header,body.page-id-47947 .page-header{display:none}
 section.the-menu{width:100%;text-align:left}
+section.the-menu .pagebreak{width:100%;clear:both;-webkit-column-span:all;-moz-column-span:all;column-span:all}
+section.the-menu .pagebreak h2{text-align:center;font-size:40px;padding:30px 0 60px 0}
 section.the-menu .fnb-logo{width:40%;margin:0 auto 60px auto}
 section.the-menu .fnb-logo img{max-width:100%}
 section.the-menu .clear{clear:both}
 section.the-menu .fnb{width:auto;padding:0 0 0 10%;margin-bottom:60px}
+section.the-menu .fnb.hide{display:none}
 section.the-menu .introtext{width:100%;font-size:14px;margin:0 0 20px 0}
-section.the-menu h2{border-bottom:dotted 1px #333;text-transform:uppercase;font-size:20px;padding-bottom:5px;width:60%;margin-bottom:20px}
+section.the-menu h2.m-item{border-bottom:dotted 1px #333;text-transform:uppercase;font-size:20px;padding-bottom:5px;width:60%;margin-bottom:20px}
 section.the-menu .bottom-section{width:100%;float:left;margin:40px auto}
 section.the-menu .bottom-section .fnb-ww-logo{width:80px;margin:30px auto;text-indent:-90000px;background-image:url(assets/img/logo.png);background-size:contain;background-repeat:no-repeat;background-position:center center}
 section.the-menu .bottom-section .fnb-ww-logo img{max-width:100%}
