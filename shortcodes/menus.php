@@ -98,25 +98,28 @@ function riversedge_shortcode( $atts ) {
 									$price = get_sub_field('price');
 									$description = get_sub_field('description');
 									$note = get_sub_field('note');
-									
+									$hide = get_sub_field('hide');
+
+							if( $hide != 'Yes' ) {
 							?>
-							<div class="item-row">
-								<?php if( $note == 'vegetarian' ) { ?>
-									<div class="single"><div class="vegetarian ficon">Vegetarian</div></div>
-								<?php } ?>
-								<?php if( $note == 'gluten' ) { ?>
-									<div class="single"><div class="gluten ficon">Gluten-Free</div></div>
-								<?php } ?>
-								<?php if( $note == 'both' ) { ?>
-									<div class="both">
-										<div class="gluten ficon">Gluten-Free</div>
-										<div class="vegetarian ficon">Vegetarian</div>
-									</div>
-								<?php } ?>
-								<h3><?php echo $name; ?></h3>
-								<?php if( $price ) { ?><div class="price"><?php echo $price; ?></div><?php } ?>
-								<?php if( $description ) { ?><div class="fdesc"><?php echo $description; ?></div><?php } ?>
-							</div>
+								<div class="item-row">
+									<?php if( $note == 'vegetarian' ) { ?>
+										<div class="single"><div class="vegetarian ficon">Vegetarian</div></div>
+									<?php } ?>
+									<?php if( $note == 'gluten' ) { ?>
+										<div class="single"><div class="gluten ficon">Gluten-Free</div></div>
+									<?php } ?>
+									<?php if( $note == 'both' ) { ?>
+										<div class="both">
+											<div class="gluten ficon">Gluten-Free</div>
+											<div class="vegetarian ficon">Vegetarian</div>
+										</div>
+									<?php } ?>
+									<h3><?php echo $name; ?></h3>
+									<?php if( $price ) { ?><div class="price"><?php echo $price; ?></div><?php } ?>
+									<?php if( $description ) { ?><div class="fdesc"><?php echo $description; ?></div><?php } ?>
+								</div>
+							<?php } ?>
 								<?php endwhile; ?>
 							</div>
 						<?php 
