@@ -61,64 +61,68 @@ function riversedge_shortcode( $atts ) {
 				<?php } ?>
 				<div class="fnb-wrap">
 			<?php while( $query->have_posts() ): $query->the_post(); $i++; 
-				$title = get_the_title();
-				// $pbTitle = get_field('page_break_title');
-				$pageBreak = get_field('page_break');
-				if( $pageBreak == 'yes' ) {
-					$pClass = 'hide';
-				} else {
-					$pClass = 'show';
-				}
-				//echo $title;
-				if( $pageBreak == 'yes' ) { ?>
-					<div class="pagebreak"><h2><?php the_title(); ?></h2></div>
-				<?php }
 
-				?>
-				<div class="fnb <?php echo $pClass; ?>">
-					<?php 
-				// echo 'works';
-				$introText = get_field('intro_text');
-				?>
-				<h2 class="m-item"><?php the_title(); ?></h2>
-				<?php
-				if( $introText ) { ?>
-					<div class="introtext"><?php echo $introText; ?></div>
-				<?php } 
-				//if( function_exists( get_field )) :
-				 
-					if( have_rows('menu_item') ) : ?>
-						<div class="fnb-item">
-							<?php while( have_rows('menu_item') ) : the_row();
-								$name = get_sub_field('name');
-								$price = get_sub_field('price');
-								$description = get_sub_field('description');
-								$note = get_sub_field('note');
-								
-						?>
-						<div class="item-row">
-							<?php if( $note == 'vegetarian' ) { ?>
-								<div class="single"><div class="vegetarian ficon">Vegetarian</div></div>
-							<?php } ?>
-							<?php if( $note == 'gluten' ) { ?>
-								<div class="single"><div class="gluten ficon">Gluten-Free</div></div>
-							<?php } ?>
-							<?php if( $note == 'both' ) { ?>
-								<div class="both">
-									<div class="gluten ficon">Gluten-Free</div>
-									<div class="vegetarian ficon">Vegetarian</div>
-								</div>
-							<?php } ?>
-							<h3><?php echo $name; ?></h3>
-							<?php if( $price ) { ?><div class="price"><?php echo $price; ?></div><?php } ?>
-							<?php if( $description ) { ?><div class="fdesc"><?php echo $description; ?></div><?php } ?>
-						</div>
-							<?php endwhile; ?>
-						</div>
-					<?php 
-					endif; // end repeater loop ?>
-					</div>
+				// Do they want this live check
+				$published = get_field('publish');
+				if( $published != 'No' ):
+					$title = get_the_title();
+					// $pbTitle = get_field('page_break_title');
+					$pageBreak = get_field('page_break');
+					if( $pageBreak == 'yes' ) {
+						$pClass = 'hide';
+					} else {
+						$pClass = 'show';
+					}
+					//echo $title;
+					if( $pageBreak == 'yes' ) { ?>
+						<div class="pagebreak"><h2><?php the_title(); ?></h2></div>
+					<?php }
 
+					?>
+					<div class="fnb <?php echo $pClass; ?>">
+						<?php 
+					// echo 'works';
+					$introText = get_field('intro_text');
+					?>
+					<h2 class="m-item"><?php the_title(); ?></h2>
+					<?php
+					if( $introText ) { ?>
+						<div class="introtext"><?php echo $introText; ?></div>
+					<?php } 
+					//if( function_exists( get_field )) :
+					 
+						if( have_rows('menu_item') ) : ?>
+							<div class="fnb-item">
+								<?php while( have_rows('menu_item') ) : the_row();
+									$name = get_sub_field('name');
+									$price = get_sub_field('price');
+									$description = get_sub_field('description');
+									$note = get_sub_field('note');
+									
+							?>
+							<div class="item-row">
+								<?php if( $note == 'vegetarian' ) { ?>
+									<div class="single"><div class="vegetarian ficon">Vegetarian</div></div>
+								<?php } ?>
+								<?php if( $note == 'gluten' ) { ?>
+									<div class="single"><div class="gluten ficon">Gluten-Free</div></div>
+								<?php } ?>
+								<?php if( $note == 'both' ) { ?>
+									<div class="both">
+										<div class="gluten ficon">Gluten-Free</div>
+										<div class="vegetarian ficon">Vegetarian</div>
+									</div>
+								<?php } ?>
+								<h3><?php echo $name; ?></h3>
+								<?php if( $price ) { ?><div class="price"><?php echo $price; ?></div><?php } ?>
+								<?php if( $description ) { ?><div class="fdesc"><?php echo $description; ?></div><?php } ?>
+							</div>
+								<?php endwhile; ?>
+							</div>
+						<?php 
+						endif; // end repeater loop ?>
+						</div>
+					<?php endif; ?>
 				<?php //endif; // need to look up future proofing "get_field" contant
 			endwhile; ?>
 			</div><!-- fnb wrap -->
