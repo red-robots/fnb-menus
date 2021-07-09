@@ -13,7 +13,7 @@ section.the-menu .fnb.hide{display:none}
 section.the-menu .introtext{width:100%;font-size:14px;margin:0 0 20px 0}
 section.the-menu h2.m-item{border-bottom:dotted 1px #333;text-transform:uppercase;font-size:20px;padding-bottom:5px;width:60%;margin-bottom:20px}
 section.the-menu .bottom-section{width:100%;float:left;margin:40px auto}
-section.the-menu .bottom-section .fnb-ww-logo{width:80px;margin:30px auto;text-indent:-90000px;background-image:url(assets/img/logo.png);background-size:contain;background-repeat:no-repeat;background-position:center center}
+section.the-menu .bottom-section .fnb-ww-logo{width:237px;margin:30px auto;text-indent:-90000px;background-image:url(assets/img/logo-full.png);background-size:cover;background-repeat:no-repeat;background-position:center center}
 section.the-menu .bottom-section .fnb-ww-logo img{max-width:100%}
 section.the-menu .bottom-section .term-desc{width:50%;text-align:center;font-size:12px;margin:0 auto}
 section.the-menu .bottom-section .notes{width:100%;text-align:center}
@@ -34,6 +34,7 @@ section.the-menu .fnb-item h3{font-size:18px;display:inline-block;width:auto;tex
 section.the-menu .fnb-item .price{font-size:12px;font-weight:bold;display:inline-block;width:auto}
 section.the-menu .fnb-item .fdesc{font-size:12px}
 @media screen and (min-width:700px){section.the-menu .fnb-wrap{-webkit-column-count:2;-moz-column-count:2;column-count:2}
+section.the-menu .bottom-section .fnb-ww-logo{width:537px;background-size:contain}
 }@media print{section.the-menu .fnb-wrap{-webkit-column-count:2;-moz-column-count:2;column-count:2}
 section.the-menu .fnb-logo{margin:0 auto}
 .pagebreak{clear:both;page-break-after:always}

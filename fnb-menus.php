@@ -23,7 +23,7 @@ add_filter('the_content', 'wpautop', 12);
 // loads the stylesheet
 add_action('wp_enqueue_scripts', 'wwc_food_style');
 function wwc_food_style() {
-	wp_register_style( 'wwc-food-styles',  plugin_dir_url( __FILE__ ) . 'wwc-food-styles.css?v=1.2' );
+	wp_register_style( 'wwc-food-styles',  plugin_dir_url( __FILE__ ) . 'wwc-food-styles.css?v=1.3' );
     wp_enqueue_style( 'wwc-food-styles' );
 }
 /**
