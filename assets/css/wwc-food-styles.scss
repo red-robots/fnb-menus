@@ -71,6 +71,10 @@ section.the-menu {
         width: auto;
         padding: 0 0 0 10%;
         margin-bottom: 60px;
+        @media screen and (min-width: $tabwidth) {
+            // width: 45%;
+            // will-change: transform;
+        }
         @media print {
             // width: 40%;
         }
@@ -94,7 +98,9 @@ section.the-menu {
     }
     .bottom-section {
         width: 100%;
-        float: left;
+        // float: left;
+        column-span: all;
+        clear: both;
         margin: 40px auto;
         .fnb-ww-logo {
             width: 237px;

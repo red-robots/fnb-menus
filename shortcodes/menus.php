@@ -75,7 +75,28 @@ function riversedge_shortcode( $atts ) {
 					}
 					//echo $title;
 					if( $pageBreak == 'yes' ) { ?>
+						<?php if( $i > 1 ) { ?>
+							<div class="bottom-section">
+								<!-- <div class="fnb-ww-logo">
+									Whitewater Center
+								</div> -->
+								<div class="notes">
+									<div class="noter">
+										<div class="flexer">
+											<div class="vegetarian"></div><div class="thenote">Vegetarian</div>
+										</div>
+									</div>
+									<div class="noter">
+										<div class="flexer">
+											<div class="gluten"></div><div class="thenote">Gluten Free</div>
+										</div>
+									</div>
+								</div>
+								<div class="term-desc"><?php echo $termDesc; ?></div>
+							</div>
+						<?php } ?>
 						<div class="pagebreak"><h2><?php the_title(); ?></h2></div>
+
 					<?php }
 
 					?>
@@ -84,6 +105,10 @@ function riversedge_shortcode( $atts ) {
 					// echo 'works';
 					$introText = get_field('intro_text');
 					?>
+					
+					
+
+
 					<h2 class="m-item"><?php the_title(); ?></h2>
 					<?php
 					if( $introText ) { ?>
@@ -124,6 +149,9 @@ function riversedge_shortcode( $atts ) {
 							</div>
 						<?php 
 						endif; // end repeater loop ?>
+						<?php if( $pageBreak == 'yes' ) { ?>
+						<div class="extradiv"></div>
+						<?php } ?>
 						</div>
 					<?php endif; ?>
 				<?php //endif; // need to look up future proofing "get_field" contant
@@ -153,8 +181,8 @@ function riversedge_shortcode( $atts ) {
 		wp_reset_query(); ?>
 	
 	<?php 
-	$content = wpautop(trim($content));
-	return $content;
+	// $content = wpautop(trim($content));
+	// return $content;
 	// Spit everythng out
 	return ob_get_clean();
 }
